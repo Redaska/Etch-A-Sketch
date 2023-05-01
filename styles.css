@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+h1 {
+  font-size: 3em;
+  color: #017767;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.container {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  margin: 20px 0px;
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin: 15px;
+  border-radius: 17px;
+}
+.Black {
+  background-color: black;
+  color: white;
+}
