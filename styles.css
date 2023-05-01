@@ -18,6 +18,8 @@ h1 {
   width: 500px;
   border: 2px solid black;
   margin: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
 }
 p {
   font-size: 20px;
@@ -30,6 +32,17 @@ p {
   border-radius: 17px;
 }
 .Black {
-  background-color: black;
+  background-color: rgb(26, 24, 24);
   color: white;
+}
+.Rainbow {
+  background: #22025d;
+  color: #bebebe;
+}
+.child {
+  box-sizing: border-box;
+  width: calc(500px / 16); /* 16 columns of squares */
+  height: calc(500px / 16); /* 16 rows of squares */
+  border: 1px solid gray;
+  background-color: white;
 }
