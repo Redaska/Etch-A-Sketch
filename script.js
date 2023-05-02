@@ -2,6 +2,7 @@ let container = document.querySelector(".container");
 let children;
 let child;
 let size = 16;
+let currentColor = "black";
 
 function createDiv() {
   for (let i = 0; i < size * size; i++) {
@@ -18,7 +19,13 @@ function changeColor() {
     const element = children[i];
 
     element.addEventListener("mouseover", function () {
-      element.classList.add("hover");
+      if (currentColor === "rainbow") {
+        element.style.backgroundColor = `hsl(${
+          Math.random() * 360
+        }, 100%, 50%)`;
+      } else {
+        element.style.backgroundColor = currentColor;
+      }
     });
   }
 }
@@ -37,6 +44,24 @@ function getSize() {
     }
   });
 }
+
+function setBlackColor() {
+  currentColor = "black";
+}
+
+function setRandomColor() {
+  currentColor = "rainbow";
+}
+function resetColors() {
+  for (let i = 0; i < children.length; i++) {
+    const element = children[i];
+    element.style.backgroundColor = "white";
+  }
+}
+
+document.querySelector(".Reset").addEventListener("click", resetColors);
+document.querySelector(".Black").addEventListener("click", setBlackColor);
+document.querySelector(".Rainbow").addEventListener("click", setRandomColor);
 getSize();
 createDiv();
 changeColor();

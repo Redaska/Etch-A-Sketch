@@ -41,9 +41,6 @@ p {
 }
 .child {
   box-sizing: border-box;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 255, 255);
   background-color: white;
-}
-.hover {
-  background-color: #000000;
 }
