@@ -41,8 +41,6 @@ p {
 }
 .child {
   box-sizing: border-box;
-  width: calc(500px / 16); /* 16 columns of squares */
-  height: calc(500px / 16); /* 16 rows of squares */
   border: 1px solid gray;
   background-color: white;
 }
